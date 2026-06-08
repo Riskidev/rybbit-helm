@@ -6,16 +6,16 @@ version: 0.5.0
 appVersion: "2.4.0"
 kubeVersion: ">=1.19.0-0"
 maintainers:
-- name: Antônio Lago
-  email: antonio.clago@outlook.com
-  url: https://github.com/antoniolago
+- name: cade
+  email: cade.ayres@riskidev.fi
+  url: https://github.com/Riskidev
 keywords:
 - analytics
 - self-hosted
 - rybbit
-home: https://github.com/antoniolago/rybbit-helm
+home: https://github.com/Riskidev/rybbit-helm
 sources:
-- https://github.com/antoniolago/rybbit-helm
+- https://github.com/Riskidev/rybbit-helm
 
 dependencies:
 - name: cluster
