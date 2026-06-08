@@ -41,11 +41,10 @@ jobs:
       - name: Run Helm lint
         run: helm lint .
 
-      - name: Run chart-testing lint
+      - name: Install chart-testing
         uses: helm/chart-testing-action@v2
         with:
           version: v3.10.0
-          config: .github/ct-config.yaml
 
       - name: Lint chart
         run: ct lint --config .github/ct-config.yaml --all
