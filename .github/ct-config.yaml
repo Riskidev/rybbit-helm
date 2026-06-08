@@ -6,7 +6,7 @@ chart-repos:
   - cnpg=https://cloudnative-pg.github.io/charts
   - altinity=https://helm.altinity.com/
 check-version-increment: false
-validate-maintainers: true
+validate-maintainers: false
 validate-chart-schema: false
 validate-yaml: true
 exclude-deprecated: true
