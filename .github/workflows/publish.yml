@@ -79,7 +79,7 @@ jobs:
         run: |
           ref=${GITHUB_REF##*/}
           echo "VERSION=${ref#v}" >> $GITHUB_ENV
-          echo "REPO_OWNER=$(echo '${{ env.REPO_OWNER }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+          echo "REPO_OWNER=$(echo "$GITHUB_REPOSITORY_OWNER" | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
           echo "Publishing version: ${ref#v}"
 
       - name: Checkout
