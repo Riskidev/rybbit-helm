@@ -79,6 +79,7 @@ jobs:
         run: |
           ref=${GITHUB_REF##*/}
           echo "VERSION=${ref#v}" >> $GITHUB_ENV
+          echo "REPO_OWNER=$(echo '${{ env.REPO_OWNER }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
           echo "Publishing version: ${ref#v}"
 
       - name: Checkout
@@ -104,5 +105,5 @@ jobs:
 
       - name: Push to GitHub Container Registry
         run: |
-          helm push rybbit-${{ env.VERSION }}.tgz oci://${{ env.GHCR_REGISTRY }}/${{ github.repository_owner }}
-          echo "Chart published: ${{ env.GHCR_REGISTRY }}/${{ github.repository_owner }}/rybbit:${{ env.VERSION }}"
+          helm push rybbit-${{ env.VERSION }}.tgz oci://${{ env.GHCR_REGISTRY }}/${{ env.REPO_OWNER }}
+          echo "Chart published: ${{ env.GHCR_REGISTRY }}/${{ env.REPO_OWNER }}/rybbit:${{ env.VERSION }}"
