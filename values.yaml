@@ -34,7 +34,7 @@ backend:
   enabled: true
   image:
     repository: ghcr.io/rybbit-io/rybbit-backend
-    tag: latest
+    tag: sha-e354887
     pullPolicy: IfNotPresent
   replicaCount: 1
   resources:
@@ -125,7 +125,7 @@ client:
   enabled: true
   image:
     repository: ghcr.io/rybbit-io/rybbit-client
-    tag: latest
+    tag: sha-e354887
     pullPolicy: IfNotPresent
   replicaCount: 1
   resources:
