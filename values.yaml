@@ -125,7 +125,7 @@ client:
   enabled: true
   image:
     repository: ghcr.io/rybbit-io/rybbit-client
-    tag: sha-e354887
+    tag: sha-64f8c4f
     pullPolicy: IfNotPresent
   replicaCount: 1
   resources:
