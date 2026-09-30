@@ -34,7 +34,7 @@ backend:
   enabled: true
   image:
     repository: ghcr.io/rybbit-io/rybbit-backend
-    tag: sha-e354887
+    tag: sha-3f2e28e
     pullPolicy: IfNotPresent
   replicaCount: 1
   resources:
@@ -125,7 +125,7 @@ client:
   enabled: true
   image:
     repository: ghcr.io/rybbit-io/rybbit-client
-    tag: sha-64f8c4f
+    tag: sha-3f2e28e
     pullPolicy: IfNotPresent
   replicaCount: 1
   resources:
@@ -225,7 +225,7 @@ valkey:
       memory: 512Mi
 
 # ClickHouse configuration (Altinity Operator)
-# 
+#
 # IMPORTANT: The Altinity ClickHouse Operator must be installed separately before
 # deploying this chart. Install it with:
 #   helm repo add altinity https://helm.altinity.com/
